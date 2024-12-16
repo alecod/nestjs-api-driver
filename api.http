@@ -1,0 +1,35 @@
+GET http://localhost:3000/places?text= av iguaçu, rebouças, curitiba, 1427
+###
+GET http://localhost:3000/places?text= av francisco matarazzo, 1705, são paulo
+
+###
+
+@originId = ChIJ6Q-NInvk3JQRNXr7J1x9sHo
+
+@destinationId = ChIJkf5U5f5XzpQRSty2UvUs87A
+
+
+###
+
+###
+GET http://localhost:3000/directions?originId={{ originId }}&destinationId={{ destinationId }}
+
+###
+
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+  "name": "roiuteee",
+  "source_id": "{{ originId }}",
+  "destination_id": "{{ destinationId }}"
+}
+
+
+###
+GET http://localhost:3000/routes
+
+###
+
+GET http://localhost:3000/routes/1
+
